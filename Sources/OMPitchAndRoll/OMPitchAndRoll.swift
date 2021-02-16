@@ -2,8 +2,8 @@ import SwiftUI
 
 struct OMPitchAndRoll: View {
     
-    @State var roll: CGFloat = 0
-    @State var pitch: CGFloat = 0
+    @Binding var roll: CGFloat
+    @Binding var pitch: CGFloat
 
     var rollString: String {
         return String(format: "%.0f", roll)
@@ -13,8 +13,6 @@ struct OMPitchAndRoll: View {
         return String(format: "%.0f", pitch)
     }
     
-    
-    @available(iOS 13.0.0, *)
     var body: some View {
         HStack {
             Text(rollString).font(.body).foregroundColor(.green).frame(width: 30, alignment: .center)
@@ -47,7 +45,8 @@ struct OMPitchAndRoll: View {
 struct OMPitchAndRoll_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10) {
-            OMPitchAndRoll(roll: 25, pitch: 140)
+            OMPitchAndRoll(roll: .constant(25),
+                           pitch: .constant(90))
         }
     }
 }

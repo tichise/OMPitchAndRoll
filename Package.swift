@@ -27,5 +27,6 @@ let package = Package(
         .testTarget(
             name: "OMPitchAndRollTests",
             dependencies: ["OMPitchAndRoll"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

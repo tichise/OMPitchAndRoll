@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OMPitchAndRoll: View {
+public struct OMPitchAndRoll: View {
     
     @Binding var roll: CGFloat
     @Binding var pitch: CGFloat

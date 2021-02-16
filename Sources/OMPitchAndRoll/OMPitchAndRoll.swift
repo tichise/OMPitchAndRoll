@@ -2,8 +2,8 @@ import SwiftUI
 
 public struct OMPitchAndRoll: View {
     
-    @Binding var roll: CGFloat
-    @Binding var pitch: CGFloat
+    @Binding public var roll: CGFloat
+    @Binding public var pitch: CGFloat
 
     var rollString: String {
         return String(format: "%.0f", roll)

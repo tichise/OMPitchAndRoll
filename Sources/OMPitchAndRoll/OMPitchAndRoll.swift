@@ -13,7 +13,7 @@ public struct OMPitchAndRoll: View {
         return String(format: "%.0f", pitch)
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             Text(rollString).font(.body).foregroundColor(.green).frame(width: 30, alignment: .center)
 

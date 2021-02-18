@@ -5,12 +5,17 @@ public struct OMPitchAndRoll: View {
     @Binding public var roll: CGFloat
     @Binding public var pitch: CGFloat
 
-    public var rollString: String {
+    var rollString: String {
         return String(format: "%.0f", roll)
     }
     
-    public var pitchString: String {
+    var pitchString: String {
         return String(format: "%.0f", pitch)
+    }
+    
+    public init(roll: Binding<CGFloat>, pitch: Binding<CGFloat>) {
+        self._roll = roll
+        self._pitch = pitch
     }
     
     public var body: some View {
@@ -45,8 +50,7 @@ public struct OMPitchAndRoll: View {
 struct OMPitchAndRoll_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10) {
-            OMPitchAndRoll(roll: .constant(25),
-                           pitch: .constant(90))
+            OMPitchAndRoll(roll: .constant(25), pitch: .constant(90))
         }
     }
 }

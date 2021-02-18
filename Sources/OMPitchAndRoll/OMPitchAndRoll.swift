@@ -13,6 +13,9 @@ public struct OMPitchAndRoll: View {
         return String(format: "%.0f", pitch)
     }
     
+    // これがないと、外部からイニシャライザにアクセスできない
+    public init() {}
+    
     public var body: some View {
         HStack {
             Text(rollString).font(.body).foregroundColor(.green).frame(width: 30, alignment: .center)

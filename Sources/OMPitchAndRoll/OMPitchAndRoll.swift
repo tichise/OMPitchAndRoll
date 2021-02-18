@@ -5,16 +5,13 @@ public struct OMPitchAndRoll: View {
     @Binding public var roll: CGFloat
     @Binding public var pitch: CGFloat
 
-    var rollString: String {
+    public var rollString: String {
         return String(format: "%.0f", roll)
     }
     
-    var pitchString: String {
+    public var pitchString: String {
         return String(format: "%.0f", pitch)
     }
-    
-    // これがないと、外部からイニシャライザにアクセスできない
-    public init() {}
     
     public var body: some View {
         HStack {

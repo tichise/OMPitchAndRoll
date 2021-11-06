@@ -20,12 +20,12 @@ public struct OMPitchAndRoll: View {
     
     public var body: some View {
         HStack {
-            Text(rollString).font(.body).foregroundColor(.green).frame(width: 30, alignment: .center)
+            Text(rollString).font(.body).frame(width: 30, alignment: .center)
 
             Text("Roll -").font(.caption2)
             
             VStack {
-                Text(pitchString).font(.body).foregroundColor(.yellow)
+                Text(pitchString).font(.body)
 
                 Text("Pitch -").font(.caption2)
                 ZStack {
@@ -37,12 +37,12 @@ public struct OMPitchAndRoll: View {
                 
                 Text("Pitch +").font(.caption2)
                 
-                Text(pitchString).font(.body).foregroundColor(.yellow)
+                Text(pitchString).font(.body)
 
             }
             
             Text("Roll +").font(.caption2)
-            Text(rollString).font(.body).foregroundColor(.green).frame(width: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            Text(rollString).font(.body).frame(width: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
     }
 }
